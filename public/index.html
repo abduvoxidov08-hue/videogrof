@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sardorbek Rahimov | Professional Video Editor & AI Twin</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#07090e',
+                            800: '#0e111a',
+                            700: '#161b26',
+                            600: '#232b3c'
+                        },
+                        brand: {
+                            purple: '#7928CA',
+                            cyan: '#00DFD8',
+                            neon: '#6366f1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #07090e;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .glow-cyan {
+            box-shadow: 0 0 35px -5px rgba(0, 223, 216, 0.25);
+        }
+        .glow-purple {
+            box-shadow: 0 0 45px -5px rgba(121, 40, 202, 0.35);
+        }
+        .glass-panel {
+            background: rgba(14, 17, 26, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-panel-hover:hover {
+            background: rgba(22, 27, 38, 0.85);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-3px);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #00DFD8 0%, #7928CA 60%, #ff007a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            border-image: linear-gradient(to right, #00DFD8, #7928CA) 1;
+        }
+        /* Custom scrollbar for chat */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 5px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(14, 17, 26, 0.4);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.4);
+            border-radius: 9999px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.8);
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.35; transform: scale(1.05); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 8s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative selection:bg-cyan-500 selection:text-black">
+
+    <!-- Ambient Glowing Background Orbs -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-purple-600/20 rounded-full blur-[140px] animate-pulse-slow"></div>
+        <div class="absolute top-1/3 -right-40 w-96 h-96 bg-cyan-500/15 rounded-full blur-[150px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+        <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-indigo-600/20 rounded-full blur-[140px] animate-pulse-slow" style="animation-delay: 4s;"></div>
+        <!-- Grid pattern overlay -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 backdrop-blur-md bg-dark-900/80 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-purple to-brand-cyan flex items-center justify-center font-bold text-lg text-white shadow-lg group-hover:scale-105 transition-transform">
+                    SR
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight text-white group-hover:text-cyan-400 transition-colors">Sardorbek Rahimov</span>
+                    <span class="block text-xs text-gray-400">Video Editor & Motion Designer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">Men haqimda</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">Dasturlar</a>
+                <a href="#portfolio" class="hover:text-cyan-400 transition-colors">Portfolio</a>
+                <a href="#pricing" class="hover:text-cyan-400 transition-colors">Narxlar</a>
+                <a href="#ai-twin" class="flex items-center gap-1.5 text-cyan-400 font-semibold hover:text-cyan-300 transition-colors">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                    </span>
+                    AI Egizak (Chat)
+                </a>
+            </nav>
+
+            <!-- CTA / Contact Buttons -->
+            <div class="flex items-center gap-3">
+                <a href="https://t.me/sardor_editor" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-white transition-all border border-white/10">
+                    <i data-lucide="send" class="w-3.5 h-3.5 text-cyan-400"></i> Telegram
+                </a>
+                <a href="#ai-twin" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-black font-bold shadow-lg shadow-cyan-500/20 hover:scale-105 transition-all">
+                    <i data-lucide="bot" class="w-4 h-4"></i> AI bilan suhbat
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-28">
+
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <!-- Status Badge -->
+                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-medium">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span>Yangi loyihalar uchun ochiqman • Freelance & Studio</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+                    Videolaringizga <br>
+                    <span class="gradient-text">kinematografik ruh</span> va dinamika beraman.
+                </h1>
+
+                <p class="text-gray-400 text-base sm:text-lg max-w-xl leading-relaxed">
+                    Salom! Men <strong class="text-white font-semibold">Sardorbek Rahimov</strong> — 24 yoshli video montajchi va vizual kontent ustasiman. YouTube tahlillari, Instagram Reels hamda kinematik loyihalar uchun g‘oyalaringizni tomoshabinni jalb qiluvchi san’at asariga aylantiraman.
+                </p>
+
+                <!-- Stats Highlights -->
+                <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/10 max-w-lg">
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white">3+ Yil</div>
+                        <div class="text-xs text-gray-400 mt-1">Tajriba (Studio & Freelance)</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400">800K+</div>
+                        <div class="text-xs text-gray-400 mt-1">Reels Ko'rishlar</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-purple-400">20+</div>
+                        <div class="text-xs text-gray-400 mt-1">YouTube Loyihalar</div>
+                    </div>
+                </div>
+
+                <!-- CTA buttons -->
+                <div class="flex flex-wrap items-center gap-4 pt-4">
+                    <a href="#ai-twin" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:opacity-95 text-dark-900 font-bold text-sm flex items-center gap-2.5 shadow-lg shadow-cyan-500/25 transition-all hover:-translate-y-0.5">
+                        <i data-lucide="message-square" class="w-4 h-4"></i> AI Egizagim bilan suhbat
+                    </a>
+                    <a href="#portfolio" class="px-6 py-3.5 rounded-xl bg-dark-800 hover:bg-dark-700 border border-white/10 text-white font-semibold text-sm flex items-center gap-2 transition-all">
+                        <i data-lucide="play-circle" class="w-4 h-4 text-cyan-400"></i> Portfolioni ko'rish
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Video/Visual Mockup Showcase -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative rounded-2xl p-1 bg-gradient-to-b from-cyan-500/30 via-purple-500/20 to-transparent glow-purple">
+                    <div class="glass-panel rounded-2xl p-6 relative overflow-hidden">
+                        <!-- Top Timeline Bar Mockup -->
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                                <span class="text-xs font-mono text-gray-400 ml-2">timeline_v2_final.prproj</span>
+                            </div>
+                            <span class="text-xs font-mono text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">00:04:18:24</span>
+                        </div>
+
+                        <!-- Editor Preview Area -->
+                        <div class="relative aspect-video rounded-xl overflow-hidden bg-black/60 border border-white/5 flex items-center justify-center group mb-4">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/40 via-cyan-900/30 to-black"></div>
+                            <!-- Mock video player overlay -->
+                            <div class="text-center z-10 p-4">
+                                <div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mx-auto text-cyan-400 group-hover:scale-110 transition-transform cursor-pointer">
+                                    <i data-lucide="play" class="w-6 h-6 ml-0.5 fill-current"></i>
+                                </div>
+                                <div class="mt-3 text-xs text-gray-300 font-semibold tracking-wide">TEAL & ORANGE CINEMATIC GRADE</div>
+                                <div class="text-[11px] text-gray-500 font-mono">DaVinci Resolve Studio • 4K 60fps</div>
+                            </div>
+                            <div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[10px] text-gray-400 font-mono px-2 py-1 bg-dark-900/80 rounded backdrop-blur-sm">
+                                <span>LUT: Arri_Film_Matrix</span>
+                                <span class="text-green-400">AUDIO: Cleaned (-14 LUFS)</span>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Floating Badge -->
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-600/30 flex items-center justify-center text-indigo-400">
+                                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-semibold text-white">Sardorbek AI Twin faol</div>
+                                    <div class="text-[11px] text-gray-400">24/7 savollarga javob beradi</div>
+                                </div>
+                            </div>
+                            <a href="#ai-twin" class="text-xs text-cyan-400 hover:text-cyan-300 font-medium flex items-center gap-1">
+                                Sinab ko'rish <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dasturlar va Mahorat (Skills) Section -->
+        <section id="skills" class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-cyan-950/60 px-3 py-1 rounded-full border border-cyan-800/40">Mening Qurollarim</span>
+                <h2 class="text-3xl font-extrabold text-white mt-3">Professional Dasturlar & Skills</h2>
+                <p class="text-gray-400 text-sm mt-2">Har bir loyihada eng zamonaviy standartlar va dasturiy ta'minotdan foydalanaman.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Adobe Premiere Pro -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl relative overflow-hidden group">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#00005B]/80 border border-[#9999FF]/30 flex items-center justify-center text-[#9999FF] font-bold text-lg font-mono">
+                            Pr
+                        </div>
+                        <span class="text-xl font-extrabold text-cyan-400">95%</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Adobe Premiere Pro</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        Asosiy montaj, dinamik kadrlar kesimi (speed ramping), YouTube va intervyular uchun qulay ritm yaratish.
+                    </p>
+                    <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-blue-500 to-cyan-400 h-full rounded-full transition-all duration-1000" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- DaVinci Resolve -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl relative overflow-hidden group">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-orange-950/60 border border-orange-500/30 flex items-center justify-center text-orange-400 font-bold text-lg font-mono">
+                            <i data-lucide="palette" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-orange-400">85%</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">DaVinci Resolve</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        Professional rang berish (Color Grading & Color Correction), kinematografik palitralar, teri tonlarini tabiiy sozlash.
+                    </p>
+                    <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-amber-500 to-orange-400 h-full rounded-full transition-all duration-1000" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Adobe After Effects -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl relative overflow-hidden group">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#2D004B]/80 border border-[#DDA0DD]/30 flex items-center justify-center text-[#DDA0DD] font-bold text-lg font-mono">
+                            Ae
+                        </div>
+                        <span class="text-xl font-extrabold text-purple-400">80%</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Adobe After Effects</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        Motion grafika, 2D animatsiyalar, vizual effektlar (VFX), 3D kamera trekingi va dinamik titrlar.
+                    </p>
+                    <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-purple-500 to-pink-400 h-full rounded-full transition-all duration-1000" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- CapCut Pro -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl relative overflow-hidden group">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white font-bold text-lg font-mono">
+                            <i data-lucide="smartphone" class="w-6 h-6 text-cyan-400"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-cyan-400">90%</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">CapCut Pro</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        Tezkor Reels, Shorts, TikTok roliklari, trend effektlar, avto-subtitrlar va diqqatni ushlovchi vizuallar.
+                    </p>
+                    <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-cyan-400 to-teal-300 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Adobe Audition -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl relative overflow-hidden group">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#003B33]/80 border border-[#00E5C0]/30 flex items-center justify-center text-[#00E5C0] font-bold text-lg font-mono">
+                            Au
+                        </div>
+                        <span class="text-xl font-extrabold text-emerald-400">75%</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Adobe Audition</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        Ovozni tozalash, fon shovqinini yo‘qotish, ekvalayzer, kompressiya va chuqur Sound Design (atmosfera tovushlari).
+                    </p>
+                    <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-emerald-500 to-green-400 h-full rounded-full transition-all duration-1000" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Ishlash Usuli & Tamoyil -->
+                <div class="glass-panel p-6 rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-950/40 to-dark-800 flex flex-col justify-between">
+                    <div>
+                        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-indigo-500/20 text-indigo-300 text-xs font-semibold mb-3">
+                            <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Standartlar
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Mening Uslubim</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Har bir soniyani qadrli qilish: dinamik B-roll, musiqaga to‘g‘ri sinxronizatsiya va ranglar orqali hikoya aytish (visual storytelling).
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+                        <span>Formatlar: 4K / 1080p / 9:16</span>
+                        <span class="text-cyan-400 font-mono">60fps / 24fps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio & Loyihalar Section -->
+        <section id="portfolio" class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-cyan-950/60 px-3 py-1 rounded-full border border-cyan-800/40">Loyihalar</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-3">Muvaffaqiyatli Keyslar</h2>
+                    <p class="text-gray-400 text-sm mt-1">Haqiqiy mijozlar va kanallar uchun montaj qilingan saralangan ishlarim.</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="https://t.me/sardor_editor" target="_blank" class="inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">
+                        Google Drive Portfolio papkasini so‘rash <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Case 1: TechUz YouTube -->
+                <div class="glass-panel glass-panel-hover rounded-2xl overflow-hidden border border-white/10 group flex flex-col">
+                    <div class="relative h-48 bg-gradient-to-tr from-blue-900 to-indigo-900 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="relative z-10 text-center p-4">
+                            <span class="inline-block px-3 py-1 rounded-full bg-red-600 text-white text-[11px] font-bold tracking-wider mb-2">
+                                YOUTUBE LOYIHA
+                            </span>
+                            <h4 class="text-xl font-bold text-white">"TechUz" Kanali</h4>
+                        </div>
+                        <div class="absolute bottom-3 left-3 right-3 flex justify-between text-[11px] text-gray-300 font-mono bg-dark-900/80 px-2.5 py-1 rounded backdrop-blur-sm">
+                            <span>20+ Tahliliy Video</span>
+                            <span class="text-cyan-400">Premiere + AE</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                20 dan ortiq texnologik va tahliliy videolarni to‘liq montaj qilganman. Dinamik B-roll kesimlari, infografik animatsiyalar va sound design orqali ushlab turish darajasi (retention) oshirilgan.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 flex-wrap text-xs text-gray-400">
+                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/5">Dynamic B-roll</span>
+                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/5">Motion Graphics</span>
+                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/5">Sound FX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2: CoffeeTime Instagram -->
+                <div class="glass-panel glass-panel-hover rounded-2xl overflow-hidden border border-white/10 group flex flex-col">
+                    <div class="relative h-48 bg-gradient-to-tr from-amber-900 to-rose-950 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="relative z-10 text-center p-4">
+                            <span class="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[11px] font-bold tracking-wider mb-2">
+                                INSTAGRAM REELS
+                            </span>
+                            <h4 class="text-xl font-bold text-white">"CoffeeTime" Tarmog‘i</h4>
+                        </div>
+                        <div class="absolute bottom-3 left-3 right-3 flex justify-between text-[11px] text-gray-300 font-mono bg-dark-900/80 px-2.5 py-1 rounded backdrop-blur-sm">
+                            <span>15 ta Promo Rolik</span>
+                            <span class="text-green-400 font-bold">800K+ Ko'rish</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                Qahvaxonalar tarmog‘i uchun 15 ta trend promo-rolik tayyorlangan. Zamonaviy ritm, tezkor vizual hooklar va avto-subtitrlar orqali umumiy 800,000 dan ortiq organik ko‘rish to‘plandi.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 flex-wrap text-xs text-gray-400">
+                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/5">Trend Reels</span>
+                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/5">Viral Hooks</span>
+                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/5">CapCut Pro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3: Indie Music Video -->
+                <div class="glass-panel glass-panel-hover rounded-2xl overflow-hidden border border-white/10 group flex flex-col">
+                    <div class="relative h-48 bg-gradient-to-tr from-teal-950 via-dark-800 to-orange-950 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="relative z-10 text-center p-4">
+                            <span class="inline-block px-3 py-1 rounded-full bg-cyan-600 text-white text-[11px] font-bold tracking-wider mb-2">
+                                COLOR GRADING
+                            </span>
+                            <h4 class="text-xl font-bold text-white">Musiqiy Klip (Indie)</h4>
+                        </div>
+                        <div class="absolute bottom-3 left-3 right-3 flex justify-between text-[11px] text-gray-300 font-mono bg-dark-900/80 px-2.5 py-1 rounded backdrop-blur-sm">
+                            <span>DaVinci Studio</span>
+                            <span class="text-amber-400">Teal & Orange</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                Mustaqil ijrochining musiqiy klipida DaVinci Resolve dasturida to‘liq kinematografik rang berish (Teal & Orange) amalga oshirildi. Tabiiy teri tusi va chuqur kontrast ta'minlangan.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 flex-wrap text-xs text-gray-400">
+                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/5">DaVinci Resolve</span>
+                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/5">Color Correction</span>
+                            <span class="px-2 py-0.5 rounded bg-white/5 border border-white/5">Cinematic Look</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Xizmat Narxlari & Hamkorlik Shartlari -->
+        <section id="pricing" class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-cyan-950/60 px-3 py-1 rounded-full border border-cyan-800/40">Shartlar & Narxlar</span>
+                <h2 class="text-3xl font-extrabold text-white mt-3">Xizmat Narxlari va Muddatlar</h2>
+                <p class="text-gray-400 text-sm mt-2">Shaffof narxlar, aniq muddatlar va kafolatlangan sifat.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Reels / Shorts / TikTok -->
+                <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between relative">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold text-cyan-400 bg-cyan-950 px-2.5 py-1 rounded border border-cyan-800/50">Qisqa Format</span>
+                            <i data-lucide="smartphone" class="w-5 h-5 text-gray-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Reels / Shorts / TikTok</h3>
+                        <p class="text-xs text-gray-400 mt-1 mb-4">Davomiyligi 30-60 soniya bo‘lgan viral roliklar.</p>
+                        
+                        <div class="text-3xl font-extrabold text-white mb-1">
+                            $25 - $40 <span class="text-xs font-normal text-gray-400">/ rolik</span>
+                        </div>
+                        <div class="text-xs text-cyan-300 font-mono mb-6">
+                            ⏱️ Muddat: 1-2 kun
+                        </div>
+
+                        <ul class="space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-4">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Dinamik kesish va montaj</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Trend avto-subtitrlar va matnlar</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Musiqa va sound design</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> 2 martagacha bepul tahrir</li>
+                        </ul>
+                    </div>
+                    <a href="https://t.me/sardor_editor?text=Salom%20Sardorbek!%20Reels%2FShorts%20montaji%20bo'yicha%20yozayotgandim." target="_blank" class="mt-6 w-full py-2.5 text-center rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors">
+                        Buyurtma berish
+                    </a>
+                </div>
+
+                <!-- YouTube Video (Featured) -->
+                <div class="glass-panel p-6 rounded-2xl border-2 border-cyan-500/50 bg-gradient-to-b from-dark-800 to-dark-900 flex flex-col justify-between relative glow-cyan">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-indigo-600 text-black text-[11px] font-extrabold px-3 py-0.5 rounded-full uppercase tracking-wider">
+                        Eng Ommabop
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold text-white bg-indigo-900/60 px-2.5 py-1 rounded border border-indigo-700/50">Uzoq Format</span>
+                            <i data-lucide="youtube" class="w-5 h-5 text-red-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">YouTube Video</h3>
+                        <p class="text-xs text-gray-400 mt-1 mb-4">10-15 daqiqali to‘liq tahliliy yoki intervyu videolari.</p>
+                        
+                        <div class="text-3xl font-extrabold text-cyan-400 mb-1">
+                            $80 - $150 <span class="text-xs font-normal text-gray-400">/ video</span>
+                        </div>
+                        <div class="text-xs text-cyan-300 font-mono mb-6">
+                            ⏱️ Muddat: 3-4 kun
+                        </div>
+
+                        <ul class="space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-4">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> To‘liq dinamik ritmik montaj</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> B-roll va 2D animatsiyalar</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Ovoz tozalash va to‘liq Sound FX</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Ranglarni korreksiya qilish</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> 2 martagacha bepul tahrir</li>
+                        </ul>
+                    </div>
+                    <a href="https://t.me/sardor_editor?text=Salom%20Sardorbek!%20YouTube%20video%20montaji%20bo'yicha%20yozayotgandim." target="_blank" class="mt-6 w-full py-2.5 text-center rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-black font-bold text-xs shadow-lg shadow-cyan-500/20 transition-all">
+                        Buyurtma berish
+                    </a>
+                </div>
+
+                <!-- Color Grading & Sound Design -->
+                <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between relative">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold text-orange-400 bg-orange-950 px-2.5 py-1 rounded border border-orange-800/50">Maxsus Post-Production</span>
+                            <i data-lucide="sliders" class="w-5 h-5 text-gray-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Color & Sound Design</h3>
+                        <p class="text-xs text-gray-400 mt-1 mb-4">Kinematografik rang berish va premium ovoz dizayni.</p>
+                        
+                        <div class="text-3xl font-extrabold text-white mb-1">
+                            Kelishuv <span class="text-xs font-normal text-gray-400">asosida</span>
+                        </div>
+                        <div class="text-xs text-gray-400 font-mono mb-6">
+                            ⏱️ Muddat: Loyihaga qarab
+                        </div>
+
+                        <ul class="space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-4">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> DaVinci Resolve Studio color grading</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Film look / Teal & Orange / Custom LUT</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Shovqinlarni tozalash & Master ovoz</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Atmosferali ovoz effektlari</li>
+                        </ul>
+                    </div>
+                    <a href="https://t.me/sardor_editor?text=Salom%20Sardorbek!%20Maxsus%20Color%20Grading%20yoki%20Sound%20Design%20bo'yicha%20kelishmoqchiydim." target="_blank" class="mt-6 w-full py-2.5 text-center rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors">
+                        Muhokama qilish
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hamkorlik Qoidalari Banner -->
+            <div class="mt-10 p-5 rounded-2xl glass-panel border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <div class="text-sm font-bold text-white">Hamkorlik Qoidalari & Kafolat</div>
+                        <div class="text-xs text-gray-400">Loyiha boshlanishidan oldin <strong>30% oldindan to‘lov</strong> olinadi. Har bir video uchun <strong>2 martagacha bepul tahrirlash (pravka)</strong> kiritiladi.</div>
+                    </div>
+                </div>
+                <div class="text-xs font-mono text-cyan-400 shrink-0 bg-cyan-950/60 px-3 py-1.5 rounded-lg border border-cyan-800/40">
+                    Sifat & Aniq Muddat
+                </div>
+            </div>
+        </section>
+
+        <!-- SARDORBEK AI TWIN (Raqamli Egizak) Interactive Section -->
+        <section id="ai-twin" class="max-w-4xl mx-auto px-6 py-16 scroll-mt-24">
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-900/60 to-cyan-900/60 border border-cyan-500/40 text-cyan-300 text-xs font-bold mb-3">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyan-400"></i> 
+                    SARDORBEKNING RAQAMLI EGIZAGI (AI TWIN)
+                </div>
+                <h2 class="text-3xl font-extrabold text-white">Men bilan jonli muloqot qiling</h2>
+                <p class="text-gray-400 text-sm max-w-xl mx-auto mt-2">
+                    Mening AI egizagim xizmatlarim, dasturlarim, portfolio va narxlarim bo‘yicha 24/7 savollaringizga 1-shaxsda javob beradi. Sinab ko‘ring!
+                </p>
+            </div>
+
+            <!-- Chat Container Box -->
+            <div class="glass-panel rounded-3xl border border-white/15 overflow-hidden shadow-2xl glow-purple flex flex-col h-[580px] bg-dark-900/90">
+                <!-- Chat Header -->
+                <div class="p-4 border-b border-white/10 bg-dark-800/90 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="relative">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center font-bold text-sm text-white">
+                                SR
+                            </div>
+                            <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-500 border-2 border-dark-800"></span>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-sm text-white">Sardorbek Rahimov (AI Twin)</span>
+                                <span class="text-[10px] bg-cyan-950 text-cyan-400 border border-cyan-800 px-1.5 py-0.2 rounded font-mono">ONLINE</span>
+                            </div>
+                            <div class="text-xs text-gray-400">Professional Video Editor • 3+ yil tajriba</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button id="clearChatBtn" title="Chatni tozalash" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chat Messages Scroll Area -->
+                <div id="chatMessages" class="flex-1 p-4 md:p-6 overflow-y-auto space-y-4 custom-scrollbar">
+                    <!-- Initial AI Greeting Message -->
+                    <div class="flex items-start gap-3 max-w-[88%]">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center text-xs font-bold text-white shrink-0 mt-1">
+                            SR
+                        </div>
+                        <div class="bg-dark-800 border border-white/10 p-3.5 rounded-2xl rounded-tl-sm text-sm text-gray-200 leading-relaxed shadow-sm">
+                            Salom! Men <strong class="text-white">Sardorbek Rahimovning raqamli egizagiman (AI Twin)</strong>. 
+                            <br><br>
+                            Mening video montaj tajribam, ishlatadigan dasturlarim, portfolio yoki xizmat narxlarim bo‘yicha qanday savolingiz bor? Sizga xushmuomala yordam berishga tayyorman!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suggested Quick Prompts -->
+                <div class="px-4 py-2 bg-dark-800/40 border-t border-white/5 overflow-x-auto custom-scrollbar flex items-center gap-2">
+                    <span class="text-[11px] text-gray-500 shrink-0 font-medium">Tezkor savollar:</span>
+                    <button onclick="sendQuickPrompt('Montaj xizmatlaringiz narxi qancha?')" class="quick-prompt-btn text-xs px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-cyan-300 transition-colors shrink-0">
+                        💰 Narxlar qancha?
+                    </button>
+                    <button onclick="sendQuickPrompt('Qaysi dasturlarda ishlaysiz?')" class="quick-prompt-btn text-xs px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-cyan-300 transition-colors shrink-0">
+                        💻 Dasturlar va ko‘nikmalar
+                    </button>
+                    <button onclick="sendQuickPrompt('Qanday loyihalarda ishlagansiz? Portfoliongiz bormi?')" class="quick-prompt-btn text-xs px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-cyan-300 transition-colors shrink-0">
+                        🎬 Ishlagan loyihalar
+                    </button>
+                    <button onclick="sendQuickPrompt('Siz bilan qanday bog‘lansam bo‘ladi?')" class="quick-prompt-btn text-xs px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-cyan-300 transition-colors shrink-0">
+                        📩 Bog‘lanish
+                    </button>
+                </div>
+
+                <!-- Chat Input Form -->
+                <div class="p-3 md:p-4 border-t border-white/10 bg-dark-800/80">
+                    <form id="chatForm" class="flex items-center gap-2">
+                        <input 
+                            type="text" 
+                            id="chatInput" 
+                            placeholder="Video montaj yoki xizmatlar bo'yicha savolingizni yozing..." 
+                            class="flex-1 bg-dark-900 border border-white/10 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 transition-all"
+                            autocomplete="off"
+                        >
+                        <button 
+                            type="submit" 
+                            id="sendBtn"
+                            class="px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-dark-900 font-bold transition-all flex items-center justify-center shrink-0 disabled:opacity-50"
+                        >
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                    <div class="flex items-center justify-between text-[11px] text-gray-500 mt-2 px-1">
+                        <span>O‘zbek, rus yoki ingliz tilida yozishingiz mumkin.</span>
+                        <span class="flex items-center gap-1"><i data-lucide="shield" class="w-3 h-3 text-cyan-400"></i> AI Twin Sardorbek qoidalari asosida ishlaydi</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bog'lanish / Kontaktlar Section -->
+        <section id="contact" class="max-w-7xl mx-auto px-6 md:px-12 py-16 border-t border-white/10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-cyan-950/60 px-3 py-1 rounded-full border border-cyan-800/40">Bog'lanish</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-3">Loyihangizni birgalikda boshlaymiz!</h2>
+                    <p class="text-gray-400 text-sm mt-3 leading-relaxed max-w-md">
+                        Savollaringiz bormi yoki yangi rolik tayyorlash kerakmi? Telegram yoki Instagram orqali to‘g‘ridan-to‘g‘ri men bilan bog‘laning.
+                    </p>
+
+                    <div class="space-y-4 mt-6">
+                        <a href="https://t.me/sardor_editor" target="_blank" class="flex items-center gap-4 p-4 rounded-xl glass-panel glass-panel-hover border border-white/10">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                                <i data-lucide="send" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-400">Telegram profil</div>
+                                <div class="text-sm font-bold text-white hover:text-cyan-400 transition-colors">@sardor_editor</div>
+                            </div>
+                        </a>
+
+                        <a href="https://instagram.com/sardor.cuts" target="_blank" class="flex items-center gap-4 p-4 rounded-xl glass-panel glass-panel-hover border border-white/10">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
+                                <i data-lucide="instagram" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-400">Instagram sahifa</div>
+                                <div class="text-sm font-bold text-white hover:text-purple-400 transition-colors">@sardor.cuts</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Direct Quick Message Card -->
+                <div class="glass-panel p-8 rounded-3xl border border-white/10">
+                    <h3 class="text-xl font-bold text-white mb-2">Tezkor xabar qoldiring</h3>
+                    <p class="text-xs text-gray-400 mb-6">Loyihangiz turi va rejalashtirgan muddatni yozsangiz, darhol Telegram orqali javob qaytaraman.</p>
+
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Ismingiz yoki Brand</label>
+                            <input type="text" id="contactName" required placeholder="Masalan: Sardor yoki TechUz" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Loyiha turi</label>
+                            <select id="contactType" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400">
+                                <option value="Instagram Reels / Shorts">Instagram Reels / TikTok ($25-$40)</option>
+                                <option value="YouTube video montaj">YouTube video (10-15 daqiqa) ($80-$150)</option>
+                                <option value="Color Grading & Sound Design">Maxsus Color Grading & Sound Design</option>
+                                <option value="Boshqa loyiha">Boshqa video loyiha</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Qisqacha ma'lumot</label>
+                            <textarea id="contactMsg" rows="3" placeholder="Rolik davomiyligi, uslubi yoki talablaringiz..." class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-black font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20">
+                            <i data-lucide="send" class="w-4 h-4"></i> Telegram orqali yuborish
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark-900/90 py-8 px-6 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 Sardorbek Rahimov. Barcha huquqlar himoyalangan.
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#about" class="hover:text-gray-300 transition-colors">Haqimda</a>
+                <a href="#skills" class="hover:text-gray-300 transition-colors">Dasturlar</a>
+                <a href="#portfolio" class="hover:text-gray-300 transition-colors">Portfolio</a>
+                <a href="https://t.me/sardor_editor" target="_blank" class="text-cyan-400 hover:underline">@sardor_editor</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Toggle Pill for Fast Access -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <a href="#ai-twin" class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600 text-dark-900 font-bold text-sm shadow-xl shadow-cyan-500/30 hover:scale-105 transition-all">
+            <span class="relative flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-black"></span>
+            </span>
+            <span>AI Egizak bilan suhbat</span>
+        </a>
+    </div>
+
+    <!-- AI TWIN SMART ENGINE SCRIPT -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Contact Form to Telegram redirection
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value;
+            const type = document.getElementById('contactType').value;
+            const msg = document.getElementById('contactMsg').value;
+            const text = encodeURIComponent(`Salom Sardorbek!\n\nIsmim / Brand: ${name}\nLoyiha turi: ${type}\nIzoh: ${msg}\n\nSaytingiz orqali yozmoqdaman.`);
+            window.open(`https://t.me/sardor_editor?text=${text}`, '_blank');
+        });
+
+        // AI Twin Knowledge Base & Brain Logic
+        const KNOWLEDGE_BASE = {
+            name: "Sardorbek Rahimov",
+            age: 24,
+            job: "Professional Video Editor & Motion Designer",
+            experience: "3 yildan ortiq erkin (freelance) va studiya tajribasi",
+            software: [
+                { name: "Adobe Premiere Pro", level: "95%", desc: "Asosiy montaj, dinamik kesish, YouTube va intervyular" },
+                { name: "DaVinci Resolve", level: "85%", desc: "Professional rang berish - Color Grading & Correction" },
+                { name: "Adobe After Effects", level: "80%", desc: "Motion grafika, 2D animatsiyalar, vizual effektlar, titrlar" },
+                { name: "CapCut Pro", level: "90%", desc: "Tezkor Reels, Shorts, zamonaviy avto-subtitrlar va trend vizuallar" },
+                { name: "Adobe Audition", level: "75%", desc: "Ovozni tozalash, fon shovqinini yo‘qotish, Sound Design" }
+            ],
+            projects: [
+                {
+                    title: "'TechUz' YouTube kanali",
+                    desc: "20 dan ortiq tahliliy videolarni montaj qilganman, dinamik B-roll va animatsiyalar qo‘shganman."
+                },
+                {
+                    title: "'CoffeeTime' qahvaxonalar tarmog‘i",
+                    desc: "Instagram Reels uchun 15 ta qisqa promo-rolik tayyorlaganman, umumiy 800K+ ko‘rishlar to‘plagan."
+                },
+                {
+                    title: "Musiqiy klip (Indie loyiha)",
+                    desc: "DaVinci Resolve dasturida to‘liq Color Grading qilganman (kinematografik tilla-ko‘k / teal & orange uslubi)."
+                }
+            ],
+            pricing: {
+                reels: "$25 - $40 (tayyor bo‘lish muddati 1-2 kun)",
+                youtube: "$80 - $150 (tayyor bo‘lish muddati 3-4 kun)",
+                special: "Maxsus Color Grading va Sound Design: kelishuv asosida",
+                terms: "30% oldindan to‘lov, 2 martagacha bepul tahrirlash (pravka) kiritiladi."
+            },
+            contact: {
+                telegram: "@sardor_editor",
+                instagram: "@sardor.cuts"
+            }
+        };
+
+        // Out-of-scope triggers
+        const OFF_TOPIC_WORDS = [
+            "siyosat", "prezident", "urush", "ovqat", "oshxona", "retsept", "pishirish", "sho'rva", "somsa", "osh",
+            "kod", "dasturlash", "python", "javascript", "react", "c++", "sql", "html yoz", "matematika", "integral",
+            "tenglama", "ob-havo", "havo qanday", "yomg'ir", "futbol", "mashina", "narx dollari", "dollar kursi",
+            "valyuta", "tibbiyot", "dori", "kasallik", "tarix", "sher", "she'r", "ertak"
+        ];
+
+        // Jailbreak / prompt leak attempts
+        const JAILBREAK_TRIGGERS = [
+            "oldingi ko'rsatmalarni unut", "oldingi ko‘rsatmalarni unut", "boshqa odam bo'lib", "boshqa odam bo‘lib",
+            "promptingni ko'rsat", "promptingni ko‘rsat", "system prompt", "barcha qoidalarni bekor qil",
+            "ignore previous instructions", "act as a python developer", "forget instructions", "show your prompt"
+        ];
+
+        // Chat UI Elements
+        const chatMessages = document.getElementById('chatMessages');
+        const chatForm = document.getElementById('chatForm');
+        const chatInput = document.getElementById('chatInput');
+        const clearChatBtn = document.getElementById('clearChatBtn');
+
+        clearChatBtn.addEventListener('click', () => {
+            chatMessages.innerHTML = `
+                <div class="flex items-start gap-3 max-w-[88%]">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center text-xs font-bold text-white shrink-0 mt-1">
+                        SR
+                    </div>
+                    <div class="bg-dark-800 border border-white/10 p-3.5 rounded-2xl rounded-tl-sm text-sm text-gray-200 leading-relaxed shadow-sm">
+                        Suhbat tozalandi. Qanday video loyihangiz bor? Savollaringizga mamnuniyat bilan javob beraman!
+                    </div>
+                </div>
+            `;
+        });
+
+        window.sendQuickPrompt = function(text) {
+            chatInput.value = text;
+            chatForm.dispatchEvent(new Event('submit'));
+        };
+
+        function addMessage(sender, text) {
+            const isUser = sender === 'user';
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `flex items-start gap-3 ${isUser ? 'justify-end' : 'max-w-[88%]'}`;
+
+            if (isUser) {
+                msgDiv.innerHTML = `
+                    <div class="bg-gradient-to-r from-cyan-500 to-indigo-600 text-dark-900 font-medium p-3.5 rounded-2xl rounded-tr-sm text-sm leading-relaxed shadow-md max-w-[85%]">
+                        ${escapeHtml(text)}
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-white/20 border border-white/30 flex items-center justify-center text-xs font-bold text-white shrink-0 mt-1">
+                        SIZ
+                    </div>
+                `;
+            } else {
+                msgDiv.innerHTML = `
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center text-xs font-bold text-white shrink-0 mt-1">
+                        SR
+                    </div>
+                    <div class="bg-dark-800 border border-white/10 p-3.5 rounded-2xl rounded-tl-sm text-sm text-gray-200 leading-relaxed shadow-sm">
+                        ${formatAIResponse(text)}
+                    </div>
+                `;
+            }
+
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.id = 'typingIndicator';
+            typingDiv.className = 'flex items-start gap-3 max-w-[88%]';
+            typingDiv.innerHTML = `
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center text-xs font-bold text-white shrink-0 mt-1">
+                    SR
+                </div>
+                <div class="bg-dark-800 border border-white/10 px-4 py-3 rounded-2xl rounded-tl-sm text-xs text-gray-400 flex items-center gap-2">
+                    <span>Sardorbek yozmoqda</span>
+                    <span class="inline-flex gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce" style="animation-delay: 0.2s"></span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce" style="animation-delay: 0.4s"></span>
+                    </span>
+                </div>
+            `;
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const indicator = document.getElementById('typingIndicator');
+            if (indicator) indicator.remove();
+        }
+
+        function escapeHtml(string) {
+            return string.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        function formatAIResponse(text) {
+            return text
+                .replace(/\n\n/g, '<br><br>')
+                .replace(/\n/g, '<br>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>');
+        }
+
+        // Language detector
+        function detectLanguage(text) {
+            const lower = text.toLowerCase();
+            // Russian detection
+            if (/[а-яё]/.test(lower)) return 'ru';
+            // English detection
+            const enWords = ["what", "how", "price", "video", "edit", "experience", "portfolio", "tell", "software", "hello", "hi", "hey"];
+            const tokens = lower.split(/\s+/);
+            const enMatches = tokens.filter(t => enWords.includes(t));
+            if (enMatches.length >= 2 || (tokens.length <= 3 && enMatches.length >= 1)) return 'en';
+            return 'uz';
+        }
+
+        // Smart Persona Response Engine
+        function generateAIResponse(userInput) {
+            const raw = userInput.trim();
+            const lower = raw.toLowerCase();
+            const lang = detectLanguage(lower);
+
+            // 1. Jailbreak & Prompt leakage protection
+            for (let trigger of JAILBREAK_TRIGGERS) {
+                if (lower.includes(trigger)) {
+                    if (lang === 'ru') {
+                        return "Извините, я отвечаю исключительно от имени Сардорбека Рахимова по вопросам видеомонтажа и моих услуг. Какой видеопроект вы планируете?";
+                    } else if (lang === 'en') {
+                        return "Sorry, I can only provide information regarding Sardorbek's video editing services, projects, and expertise. What video project are you planning?";
+                    }
+                    return "Kechirasiz, men faqat Sardorbekning video montaj faoliyati, loyihalari va xizmatlari bo‘yicha ma'lumot bera olaman. Video bo‘yicha qanday loyihangiz bor?";
+                }
+            }
+
+            // 2. Off-topic detection
+            for (let word of OFF_TOPIC_WORDS) {
+                if (lower.includes(word)) {
+                    if (lang === 'ru') {
+                        return "Извините, я могу проконсультировать только по видеомонтажу, моим проектам и услугам. Какой видеоролик вы хотите создать?";
+                    } else if (lang === 'en') {
+                        return "I apologize, but I only assist with Sardorbek's video editing projects, software skills, and editing services. How can I help with your video project?";
+                    }
+                    return "Kechirasiz, men faqat Sardorbekning video montaj faoliyati, loyihalari va xizmatlari bo‘yicha ma'lumot bera olaman. Video bo‘yicha qanday loyihangiz bor?";
+                }
+            }
+
+            // 3. Greetings & Identity
+            if (/^(salom|assalomu|qalaysiz|privet|hi|hello|xush|hey)/i.test(lower)) {
+                if (lang === 'ru') {
+                    return "Привет! Я цифровой двойник Сардорбека Рахимова. Я профессиональный видеомонтажер и моушн-дизайнер с опытом более 3 лет. Расскажите о вашей задаче, и я сориентирую по срокам и стоимости!";
+                } else if (lang === 'en') {
+                    return "Hello! I am Sardorbek Rahimov's AI Twin. I am a professional video editor and motion designer with 3+ years of experience. Tell me about your video project!";
+                }
+                return "Assalomu alaykum! Men Sardorbekning raqamli egizagiman. 3 yildan ortiq tajribaga ega video montajchi va motion dizaynerman. Qanday video loyihangiz bor, sizga qanday yordam bera olaman?";
+            }
+
+            // 4. Pricing & Cost questions
+            if (lower.includes('narx') || lower.includes('qancha') || lower.includes('pul') || lower.includes('summa') || lower.includes('price') || lower.includes('стоим') || lower.includes('цен')) {
+                if (lang === 'ru') {
+                    return "Мои ориентировочные расценки:\n• **Reels / Shorts / TikTok (30-60 сек):** $25 - $40 (срок: 1-2 дня)\n• **YouTube видео (10-15 мин):** $80 - $150 (срок: 3-4 дня)\n• **Color Grading & Sound Design:** по договоренности.\nУсловия: 30% предоплата, до 2 бесплатных правок включено.";
+                } else if (lang === 'en') {
+                    return "Here are my estimated rates:\n• **Reels / Shorts / TikTok (30-60s):** $25 - $40 (turnaround: 1-2 days)\n• **YouTube video (10-15 min):** $80 - $150 (turnaround: 3-4 days)\n• **Custom Color Grading & Sound Design:** negotiable.\nTerms: 30% advance deposit, up to 2 free revisions included.";
+                }
+                return "Mening xizmat narxlarim quyidagicha:\n• **Reels / Shorts / TikTok (30-60 soniya):** $25 - $40 (tayyor bo‘lish muddati: 1-2 kun)\n• **YouTube video (10-15 daqiqa):** $80 - $150 (tayyor bo‘lish muddati: 3-4 kun)\n• **Maxsus Color Grading va Sound Design:** kelishuv asosida.\n\nHamkorlik sharti: 30% oldindan to‘lov va 2 martagacha bepul tahrirlash (pravka) mavjud.";
+            }
+
+            // 5. Software / Dasturlar questions
+            if (lower.includes('dastur') || lower.includes('program') || lower.includes('qaysi') || lower.includes('soft') || lower.includes('premiere') || lower.includes('davinci') || lower.includes('after effects') || lower.includes('capcut') || lower.includes('софт')) {
+                if (lang === 'ru') {
+                    return "В своей работе я использую топовый профессиональный софт:\n• **Adobe Premiere Pro (95%):** основной монтаж, динамичный ритм, YouTube\n• **DaVinci Resolve (85%):** профессиональный грейдинг и цветокоррекция\n• **Adobe After Effects (80%):** моушн-дизайн, 2D анимация и титры\n• **CapCut Pro (90%):** трендовые вертикальные ролики\n• **Adobe Audition (75%):** чистка звука и саунд-дизайн.";
+                } else if (lang === 'en') {
+                    return "I work with industry-standard editing software:\n• **Adobe Premiere Pro (95%):** Core dynamic editing & YouTube storytelling\n• **DaVinci Resolve (85%):** Advanced color grading & correction\n• **Adobe After Effects (80%):** Motion graphics & 2D animation\n• **CapCut Pro (90%):** Fast-paced Reels & Shorts\n• **Adobe Audition (75%):** Audio cleanup & sound design.";
+                }
+                return "Men quyidagi professional dasturlarda ishlayman:\n• **Adobe Premiere Pro (95%):** Asosiy montaj, dinamik kesish, YouTube va intervyular\n• **DaVinci Resolve (85%):** Professional rang berish (Color Grading & Correction)\n• **Adobe After Effects (80%):** Motion grafika, 2D animatsiyalar, vizual effektlar\n• **CapCut Pro (90%):** Tezkor Reels, Shorts, zamonaviy avto-subtitrlar\n• **Adobe Audition (75%):** Ovozni tozalash, fon shovqinini yo‘qotish va Sound Design.";
+            }
+
+            // 6. Portfolio & Projects questions
+            if (lower.includes('loyiha') || lower.includes('portfolio') || lower.includes('ishlar') || lower.includes('qilgan') || lower.includes('techuz') || lower.includes('coffeetime') || lower.includes('проект') || lower.includes('кейсы')) {
+                if (lang === 'ru') {
+                    return "Мои ключевые проекты:\n1. **'TechUz' YouTube:** смонтировал 20+ аналитических видео с динамичным B-roll и анимацией.\n2. **'CoffeeTime' кофейни:** создал 15 Reels, суммарно набравших 800K+ просмотров.\n3. **Инди музыкальный клип:** полный Color Grading в DaVinci Resolve в кинематографичном стиле teal & orange.\nСсылка на Google Drive с портфолио доступна в меню!";
+                } else if (lang === 'en') {
+                    return "Here are my highlighted projects:\n1. **'TechUz' YouTube Channel:** Edited 20+ in-depth tech videos with dynamic B-roll and motion graphics.\n2. **'CoffeeTime' Coffee Chain:** Produced 15 promotional Reels generating 800K+ organic views.\n3. **Indie Music Video:** Completed cinematic Teal & Orange color grading in DaVinci Resolve.\nGoogle Drive portfolio link is available upon request!";
+                }
+                return "Mening asosiy bajargan loyihalarim:\n1. **'TechUz' YouTube kanali:** 20 dan ortiq tahliliy videolarni montaj qilganman, dinamik B-roll va animatsiyalar qo‘shganman.\n2. **'CoffeeTime' qahvaxonalar tarmog‘i:** Instagram Reels uchun 15 ta promo-rolik tayyorlaganman (800K+ ko‘rishlar to‘plagan).\n3. **Musiqiy klip (Indie loyiha):** DaVinci Resolve dasturida to‘liq kinematografik (teal & orange) Color Grading qilganman.\n\nBatafsil portfolio havolasi saytimiz menyusida mavjud!";
+            }
+
+            // 7. Contact / Aloqa questions
+            if (lower.includes('bog\'lan') || lower.includes('bog‘lan') || lower.includes('telegram') || lower.includes('instagram') || lower.includes('aloqa') || lower.includes('contact') || lower.includes('связаться') || lower.includes('написать')) {
+                if (lang === 'ru') {
+                    return "Вы можете связаться со мной напрямую:\n• Telegram: **@sardor_editor**\n• Instagram: **@sardor.cuts**\nНапишите в Telegram, обсудим ваш проект прямо сейчас!";
+                } else if (lang === 'en') {
+                    return "You can get in touch with me directly:\n• Telegram: **@sardor_editor**\n• Instagram: **@sardor.cuts**\nFeel free to drop a message to discuss your next video!";
+                }
+                return "Men bilan to‘g‘ridan-to‘g‘ri quyidagi manzillar orqali bog‘lanishingiz mumkin:\n• Telegram: **@sardor_editor**\n• Instagram: **@sardor.cuts**\n\nTelegramga yozsangiz, loyihangizni batafsil muhokama qilamiz va tezkor boshlaymiz!";
+            }
+
+            // 8. Experience / Tajriba / Who are you questions
+            if (lower.includes('kim') || lower.includes('tajriba') || lower.includes('yosh') || lower.includes('staj') || lower.includes('who') || lower.includes('опыт')) {
+                if (lang === 'ru') {
+                    return "Меня зовут Сардорбек Рахимов, мне 24 года. Я профессиональный видеомонтажер и моушн-дизайнер с опытом работы более 3 лет (фриланс и студия). Специализируюсь на динамичном монтаже для YouTube, вирусных Reels и кинематографичной цветокоррекции.";
+                } else if (lang === 'en') {
+                    return "My name is Sardorbek Rahimov, I am 24 years old. I have over 3 years of freelance and studio experience in video editing and motion design, specializing in YouTube videos, engaging Reels, and cinematic color grading.";
+                }
+                return "Ismim Sardorbek Rahimov, yoshim 24 da. Professional Video Editor va Motion Designerman. 3 yildan ortiq erkin (freelance) hamda studiya tajribasiga egaman. Har qanday video g‘oyani sifatli va tomoshabop qilib montaj qilib beraman.";
+            }
+
+            // 9. Terms, revisions & deadline questions
+            if (lower.includes('muddat') || lower.includes('vaqt') || lower.includes('pravka') || lower.includes('tahrir') || lower.includes('to\'lov') || lower.includes('mudat') || lower.includes('сроки') || lower.includes('правки')) {
+                if (lang === 'ru') {
+                    return "Сроки сдачи:\n• Reels/Shorts: 1-2 дня\n• YouTube видео (10-15 мин): 3-4 дня.\nУсловия работы: 30% предоплата перед началом, в стоимость входят до 2 бесплатных кругов правок (tahrirlash).";
+                }
+                return "Muddati va shartlari:\n• Reels/Shorts: 1-2 kun\n• YouTube video (10-15 daqiqa): 3-4 kun\n\nHamkorlik qoidalari: 30% oldindan to‘lov olinadi va har bir video uchun 2 martagacha bepul tahrirlash (pravka) kiritiladi.";
+            }
+
+            // Default fallback response in character
+            if (lang === 'ru') {
+                return "Я с удовольствием помогу с видеомонтажом! Уточните, какой формат вас интересует: динамичный Reels/Shorts, большой ролик для YouTube или профессиональный Color Grading в DaVinci Resolve?";
+            } else if (lang === 'en') {
+                return "I'd be glad to assist with your video editing! Are you looking for viral Reels/Shorts, full-length YouTube videos, or cinematic Color Grading in DaVinci Resolve?";
+            }
+            return "Video montaj, motion dizayn yoki rang berish bo‘yicha har qanday savolingizga javob bera olaman. Sizga qaysi formatdagi video kerak: qisqa Reels/Shorts, YouTube intervyu yoki maxsus rang berishmi?";
+        }
+
+        // Form Submit Handler
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            addMessage('user', text);
+            chatInput.value = '';
+            showTypingIndicator();
+
+            // Simulate natural AI thinking time (400 - 800ms)
+            setTimeout(() => {
+                removeTypingIndicator();
+                const reply = generateAIResponse(text);
+                addMessage('ai', reply);
+            }, 600);
+        });
+    </script>
+</body>
+</html>
